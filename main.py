@@ -15,8 +15,12 @@ def main():
 
     while True:
         screen.fill(color=0x000000)
+
+        player.update(dt)
         player.draw(screen)
+        
         pygame.display.flip()
+
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 return
